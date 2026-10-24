@@ -23,6 +23,26 @@ Sections:
 ================================================================================
 
 --------------------------------------------------------------------------------
+WEEK 9  (w/c 2026-10-19)  -  P1-A6 merged; P1-A7 Part 1 on feature/p1-a7  [Manojkumar]
+--------------------------------------------------------------------------------
+P1-A6 reached main through PR #11 (2026-10-19, merge commit fd89f6b).
+P1-A7 (Multi-Model AI Systems, 250 pts, due Mon 2026-10-26) is not a Django
+assignment, so it lives in multi-model/ on feature/p1-a7.
+
+Done: Part 1 (model size selection and benchmarking).
+  - The same 15 models as A6, in A6's five size categories (3 each).
+  - 5 prompt types QuadConnect needs x 5 prompts = 25; 375 replies, each
+    with latency, tokens/sec and time to first token.
+  - Every reply scored 1-10 by a rubric in code: accuracy, instruction
+    adherence, structure, clarity, with accuracy gating the score. A hand
+    spot check of 20 replies differs from the code by 0.94 points on average.
+  - Result: Very Large 9.92 > Large 9.34 > Medium 8.95 > Small 8.04 >
+    Ultra-Light 5.99. Not always bigger-is-better: Qwen2.5-3B (9.32) beat
+    three larger local models. Best balance: Qwen3.8-27B on Groq overall,
+    Qwen2.5-3B on our own CPU.
+Next: Part 2 (cost at six traffic levels) and Part 3 (routing).
+
+--------------------------------------------------------------------------------
 WEEK 8  (w/c 2026-10-12)  -  P1-A5 merged; P1-A6 on feature/p1-a6  [Manojkumar]
 --------------------------------------------------------------------------------
 P1-A5 reached main through PR #10 (2026-10-12, merge commit df81e3b). P1-A6

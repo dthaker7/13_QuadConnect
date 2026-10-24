@@ -85,6 +85,32 @@ exist.)
 
 ---
 
+## P1-A7: multi-model AI systems
+
+Built on `feature/p1-a7`, cut from `main` after P1-A6. This assignment is not
+part of the Django app: everything lives in [`multi-model/`](multi-model/) and
+only reuses QuadConnect's data (interests, colleges, venues, feedback notes) as
+test inputs.
+
+- [`multi-model/multi_model_system.ipynb`](multi-model/multi_model_system.ipynb):
+  Part 1, the 15 models from P1-A6 benchmarked on 25 prompts (5 prompt types ×
+  5), each reply scored from 1 to 10 on accuracy, instruction adherence,
+  structure and clarity, with tokens per second and latency.
+- [`multi-model/system_design.md`](multi-model/system_design.md): the design
+  write-up (model selection so far).
+- `multi-model/results/`: every reply (`runs.jsonl`, so a re-run only
+  generates what is missing), the full benchmark table (`benchmark_table.csv`)
+  and our hand-scored spot check (`manual_check.json`).
+
+```bash
+cd multi-model
+pip install -r requirements.txt     # torch, transformers, bitsandbytes, pandas, ...
+# GROQ_API_KEY in ../.env runs the three models over 15B
+jupyter nbconvert --to notebook --execute --inplace multi_model_system.ipynb
+```
+
+---
+
 ## P1-A6 features
 
 Built on `feature/p1-a6`, cut from `main` after P1-A5. The AI features are
@@ -800,6 +826,7 @@ own login, for staff.
 ├── requirements.txt              pip freeze: 61 pinned packages, torch and transformers included
 ├── README_AI.md                  P1-A6: the AI features, their data, preprocessing and guardrails
 ├── llm-test/                     P1-A6 model lab: ai_prototype.ipynb, its extra requirements, results/
+├── multi-model/                  P1-A7 (not Django): multi_model_system.ipynb, system_design.md, requirements, results/
 ├── db.sqlite3                    committed: seed data only (P1-A4 deploys it)
 ├── templates/                    site-wide templates
 │   ├── account/                  login, sign-up and logout pages (allauth)
