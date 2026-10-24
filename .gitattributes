@@ -1,0 +1,4 @@
+# Benchmark results stay byte-identical to what the notebooks write: no CRLF
+# conversion on Windows checkouts (a reply's own line breaks are part of the data).
+llm-test/results/* text eol=lf
+multi-model/results/* text eol=lf
