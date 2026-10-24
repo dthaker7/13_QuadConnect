@@ -25,9 +25,9 @@ what we chose not to build, and where the shortcuts are.
 | | |
 |---|---|
 | **Repo** | `13_QuadConnect` |
-| **Assignment in flight** | **P1-A7** — Multi-Model AI Systems (250 pts, group): Part 1 benchmarking (done on the branch), Part 2 cost at six traffic levels and Part 3 routing (next) — built on `feature/p1-a7` in `multi-model/`, not part of the Django app, due Mon 2026-10-26 |
+| **Assignment in flight** | **P1-A7** — Multi-Model AI Systems (250 pts, group): Part 1 benchmarking (done on the branch), Part 2 cost at six traffic levels and Part 3 routing (next) — built on `feature/p1-a7-part-1` in `multi-model/`, not part of the Django app, due Mon 2026-10-26 |
 | **Last completed** | P1-A6 — Text Intelligence (100 pts) — merged into `main` (PR #11, 2026-10-19) |
-| **`main` status** | Has P1-A2 to P1-A6 (`fd89f6b`, PR #11). `feature/p1-a7` was cut from it. |
+| **`main` status** | Has P1-A2 to P1-A6 (`fd89f6b`, PR #11). `feature/p1-a7-part-1` was cut from it. |
 | **What remains** | P1-A7 Parts 2 and 3, then a PR into `main` and the Canvas submission (§9, §12). |
 
 `main` ships P1-A2 (split settings, `.env` handling, `base.html`, the shared
@@ -56,7 +56,7 @@ only through a PR whose head has passed it.
 | Manojkumar Mohankumar (P1-A4) | `feature/p1-a4` | all four A4 parts | `/api/summary/`, `/vega-lite/...`, `/api/icebreakers/`, `/reports/`, `/export/...` | ✅ DONE — merged to `main` in PR #9 (2026-10-05); live at <https://manojkmohan43.pythonanywhere.com/>; see §9 |
 | Manojkumar Mohankumar (P1-A5) | `feature/p1-a5` | Parts 1–4 | `/accounts/...`, every route behind a login, `/api/summary/` public | ✅ DONE — merged to `main` in PR #10 (2026-10-12); deployed 2026-10-09; see §9 |
 | Manojkumar Mohankumar (P1-A6) | `feature/p1-a6` | Parts 1–3 | `/search/ask/`, the venue check on `/locations/`, `llm-test/` | ✅ DONE — merged to `main` in PR #11 (2026-10-19); see §9 |
-| Manojkumar Mohankumar (P1-A7) | `feature/p1-a7` | Part 1 of 3 | `multi-model/` (not Django) | BUILDING — Part 1 done 2026-10-24; Parts 2–3 next; see §9 |
+| Manojkumar Mohankumar (P1-A7) | `feature/p1-a7-part-1` | Part 1 of 3 | `multi-model/` (not Django) | BUILDING — Part 1 done 2026-10-24; Parts 2–3 next; see §9 |
 
 **Whoever completes a branch:** updating this file is
 **Step 7 of that developer's build task** and a box on their Done
@@ -603,7 +603,7 @@ that property when adding checks.
 
 The running history of what has actually been built. Newest at the top.
 
-### BUILDING `feature/p1-a7` - Manojkumar Mohankumar - 2026-10-24
+### BUILDING `feature/p1-a7-part-1` - Manojkumar Mohankumar - 2026-10-24
 **Shipped so far:** P1-A7 Part 1 (model size selection and benchmarking), on a
 branch cut from `main` at `fd89f6b`. The assignment is independent of the
 Django app, so everything is in `multi-model/`.
@@ -618,7 +618,7 @@ Django app, so everything is in `multi-model/`.
   `manual_check.json`.
 
 **Files changed:** `README.md` (P1-A7 section, layout), `ruff.toml` (E402 for
-the new notebook), the CI workflow (now runs on `feature/p1-a7`), this file,
+the new notebook), the CI workflow (now runs on `feature/p1-a7-part-1`), this file,
 notes.txt.
 
 **Gotchas:** a laptop that sleeps mid-run stalls a reply (one took 43 minutes);

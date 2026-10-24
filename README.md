@@ -87,7 +87,7 @@ exist.)
 
 ## P1-A7: multi-model AI systems
 
-Built on `feature/p1-a7`, cut from `main` after P1-A6. This assignment is not
+Built on `feature/p1-a7-part-1`, cut from `main` after P1-A6. This assignment is not
 part of the Django app: everything lives in [`multi-model/`](multi-model/) and
 only reuses QuadConnect's data (interests, colleges, venues, feedback notes) as
 test inputs.
