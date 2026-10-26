@@ -25,10 +25,10 @@ what we chose not to build, and where the shortcuts are.
 | | |
 |---|---|
 | **Repo** | `13_QuadConnect` |
-| **Assignment in flight** | **P1-A6** — Text Intelligence: a Hugging Face model lab (15 models, Route A prompting), a local model in a Django view, a second AI feature through an external API, and a production reflection (100 pts) — built on `feature/p1-a6`, due Mon 2026-10-19 |
-| **Last completed** | P1-A5.1 — logins, Google sign-in, a public API, the team video (50 pts) — merged into `main` (PR #10, 2026-10-12), live at <https://manojkmohan43.pythonanywhere.com/> |
-| **`main` status** | Has P1-A2 to P1-A5 (`df81e3b`, PR #10). `feature/p1-a6` was cut from it. |
-| **What remains** | P1-A6 is done on its branch (§9): a PR into `main`, then the Canvas submission (§12). |
+| **Assignment in flight** | **P1-A7** — Multi-Model AI Systems (250 pts, group): Part 1 benchmarking (done on the branch), Part 2 cost at six traffic levels and Part 3 routing (next) — built on `feature/p1-a7-part-1` in `multi-model/`, not part of the Django app, due Mon 2026-10-26 |
+| **Last completed** | P1-A6 — Text Intelligence (100 pts) — merged into `main` (PR #11, 2026-10-19) |
+| **`main` status** | Has P1-A2 to P1-A6 (`fd89f6b`, PR #11). `feature/p1-a7-part-1` was cut from it. |
+| **What remains** | P1-A7 Parts 2 and 3, then a PR into `main` and the Canvas submission (§9, §12). |
 
 `main` ships P1-A2 (split settings, `.env` handling, `base.html`, the shared
 list template, a home dashboard and the four graded views), P1-A3 (detail
@@ -55,7 +55,8 @@ only through a PR whose head has passed it.
 | Manojkumar Mohankumar (P1-A3, solo) | `feature/p1-a3` | all six A3 sections | `/search/`, `/matches/<pk>/`, `/locations/<pk>/`, `/insights/`, `/api/` | ✅ DONE — merged to `main` in PR #6 (2026-09-28); see §9 |
 | Manojkumar Mohankumar (P1-A4) | `feature/p1-a4` | all four A4 parts | `/api/summary/`, `/vega-lite/...`, `/api/icebreakers/`, `/reports/`, `/export/...` | ✅ DONE — merged to `main` in PR #9 (2026-10-05); live at <https://manojkmohan43.pythonanywhere.com/>; see §9 |
 | Manojkumar Mohankumar (P1-A5) | `feature/p1-a5` | Parts 1–4 | `/accounts/...`, every route behind a login, `/api/summary/` public | ✅ DONE — merged to `main` in PR #10 (2026-10-12); deployed 2026-10-09; see §9 |
-| Manojkumar Mohankumar (P1-A6) | `feature/p1-a6` | Parts 1–3 | `/search/ask/`, the venue check on `/locations/`, `llm-test/` | ✅ DONE on the branch (2026-10-19), CI green; PR into `main` next; see §9 |
+| Manojkumar Mohankumar (P1-A6) | `feature/p1-a6` | Parts 1–3 | `/search/ask/`, the venue check on `/locations/`, `llm-test/` | ✅ DONE — merged to `main` in PR #11 (2026-10-19); see §9 |
+| Manojkumar Mohankumar (P1-A7) | `feature/p1-a7-part-1` | Part 1 of 3 | `multi-model/` (not Django) | BUILDING — Part 1 done 2026-10-24; Parts 2–3 next; see §9 |
 
 **Whoever completes a branch:** updating this file is
 **Step 7 of that developer's build task** and a box on their Done
@@ -601,6 +602,28 @@ that property when adding checks.
 ## 9. Work log
 
 The running history of what has actually been built. Newest at the top.
+
+### BUILDING `feature/p1-a7-part-1` - Manojkumar Mohankumar - 2026-10-24
+**Shipped so far:** P1-A7 Part 1 (model size selection and benchmarking), on a
+branch cut from `main` at `fd89f6b`. The assignment is independent of the
+Django app, so everything is in `multi-model/`.
+- `multi_model_system.ipynb`: the same 15 models as A6 in A6's five size
+  categories, 5 prompt types QuadConnect needs (structured extraction,
+  classification, prediction, summarization, text generation) × 5 prompts,
+  375 replies with latency, tokens/sec and time to first token, each scored
+  1–10 by a rubric in code (accuracy gates the score), a hand spot check of 20
+  replies, a timing check, and the Step 1.6 analysis.
+- `system_design.md`: Part 1's architectural conclusions (three model tiers).
+- `results/`: `runs.jsonl` (every reply, resumable), `benchmark_table.csv`,
+  `manual_check.json`.
+
+**Files changed:** `README.md` (P1-A7 section, layout), `ruff.toml` (E402 for
+the new notebook), the CI workflow (now runs on `feature/p1-a7-part-1`), this file,
+notes.txt.
+
+**Gotchas:** a laptop that sleeps mid-run stalls a reply (one took 43 minutes);
+the notebook's timing check finds such replies, and deleting them from
+`runs.jsonl` and re-running regenerates only them.
 
 **Each developer replaces their own placeholder block before merging**, using
 this exact shape so every entry reads the same way and the merged file stays

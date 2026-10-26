@@ -1,0 +1,22 @@
+[
+  {"Model": "Falcon3-1B-Instruct", "Prompt ID": "X3", "our score": 4, "our reason": "Movies and one-on-one right; 'Books' is not a list name, invents Saturday morning, misses quiet."},
+  {"Model": "Llama-3.1-Tulu-3-8B", "Prompt ID": "X1", "our score": 6, "our reason": "All four asked-for filters right, but it invents Grainger and SOCIAL, which would wrongly narrow the search."},
+  {"Model": "gpt-oss-20b", "Prompt ID": "X5", "our score": 10, "our reason": "Off-topic request correctly answered with {}."},
+  {"Model": "Qwen2.5-0.5B-Instruct", "Prompt ID": "X4", "our score": 4, "our reason": "Day, time and energy right, but misses Dance Marathon and invents a college that is not on the list."},
+  {"Model": "Falcon3-1B-Instruct", "Prompt ID": "C3", "our score": 6, "our reason": "Right decision (reject) for the wrong reason: calls a bar a private home, which would mislead staff."},
+  {"Model": "Llama-3.1-Tulu-3-8B", "Prompt ID": "C1", "our score": 10, "our reason": "Right decision with a short, correct reason."},
+  {"Model": "gpt-oss-20b", "Prompt ID": "C5", "our score": 10, "our reason": "Right decision with a short, correct reason."},
+  {"Model": "Qwen2.5-0.5B-Instruct", "Prompt ID": "C4", "our score": 6, "our reason": "Right decision (review) but a wrong reason: the park is public, the issue is the distance."},
+  {"Model": "Falcon3-1B-Instruct", "Prompt ID": "P3", "our score": 3, "our reason": "Rating one too high and wrongly predicts they want to stay connected after a bad meetup."},
+  {"Model": "Llama-3.1-Tulu-3-8B", "Prompt ID": "P1", "our score": 10, "our reason": "Rating and stay-connected both right."},
+  {"Model": "gpt-oss-20b", "Prompt ID": "P5", "our score": 10, "our reason": "Rating and stay-connected both right."},
+  {"Model": "Qwen2.5-0.5B-Instruct", "Prompt ID": "P4", "our score": 7, "our reason": "Stay-connected right; rating 3 where the note reads as a 4."},
+  {"Model": "Falcon3-1B-Instruct", "Prompt ID": "S3", "our score": 8, "our reason": "Accurate and clear (photography, rain, indoor next time) but two sentences where one was asked."},
+  {"Model": "Llama-3.1-Tulu-3-8B", "Prompt ID": "S1", "our score": 10, "our reason": "One sentence with the mood and the crowding problem, no names."},
+  {"Model": "gpt-oss-20b", "Prompt ID": "S5", "our score": 9, "our reason": "Covers the comments and the request for staff, but keeps the note's 'my accent', odd in a staff summary."},
+  {"Model": "Qwen2.5-0.5B-Instruct", "Prompt ID": "S4", "our score": 7, "our reason": "Slow start and good ending right, no names, but leaves out the trivia game and reads clumsily."},
+  {"Model": "Falcon3-1B-Instruct", "Prompt ID": "G3", "our score": 9, "our reason": "Three numbered basketball questions, all usable; the first is a little odd."},
+  {"Model": "Llama-3.1-Tulu-3-8B", "Prompt ID": "G1", "our score": 10, "our reason": "Three short questions covering both gaming and music."},
+  {"Model": "gpt-oss-20b", "Prompt ID": "G5", "our score": 10, "our reason": "Three good questions joining food and travel."},
+  {"Model": "Qwen2.5-0.5B-Instruct", "Prompt ID": "G4", "our score": 7, "our reason": "Reading and art covered but no question about movies, and the second question is awkward."}
+]
